@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "Subject": "Hej Hej",
+    "text": "Jag tycker om dig",
+    "from": "Sabrina Zancotti",
+    "unread": true,
+    "timeStamp": "2021-12-30"
+  },
+  {
+    "id": 2,
+    "Subject": "Hej Hej",
+    "text": "Wawaweeewaaa",
+    "from": "Sabrina Zancotti",
+    "unread": true,
+    "timeStamp": "2021-12-30"
+  },
+  {
+    "id": 3,
+    "Subject": "Potatismos",
+    "text": "Jag tycker om dig",
+    "from": "Sabrina Zancotti",
+    "unread": true,
+    "timeStamp": "2021-12-30"
+  },
+  {
+    "id": 4,
+    "Subject": "Älskling",
+    "text": "Jag tycker om dig",
+    "from": "Sabrina Zancotti",
+    "unread": true,
+    "timeStamp": "2021-12-30"
+  }
+]
