@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "Subject": "Hej Hej",
+    "subject": "Hej Hej",
     "text": "Jag tycker om dig",
     "from": "Sabrina Zancotti",
     "unread": true,
@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "Subject": "Hej Hej",
+    "subject": "Hej Hej",
     "text": "Wawaweeewaaa",
     "from": "Sabrina Zancotti",
     "unread": true,
@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "Subject": "Potatismos",
+    "subject": "Potatismos",
     "text": "Jag tycker om dig",
     "from": "Sabrina Zancotti",
     "unread": true,
@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "Subject": "Älskling",
+    "subject": "Älskling",
     "text": "Jag tycker om dig",
     "from": "Sabrina Zancotti",
     "unread": true,
