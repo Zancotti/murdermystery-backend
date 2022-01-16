@@ -17,7 +17,6 @@ mongoose
   .connect(mongoUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
   })
   .then((res) => console.log("Connected to DB"))
   .catch((err) => console.log("Something went wrong!", err));
@@ -52,7 +51,7 @@ const FileSchema = new mongoose.Schema({
   name: String,
 });
 
-const File = mongoose.model("User", FileSchema);
+const File = mongoose.model("File", FileSchema);
 
 const MailSchema = new mongoose.Schema({
   id: Number,
