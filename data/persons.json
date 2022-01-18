@@ -2,21 +2,26 @@
   {
     "id": 1,
     "firstName": "Sabrina",
-    "lastName": "Zancotti"
+    "lastName": "Zancotti",
+    "image": "owen.jpg",
+    "info": "<h1>Title</h1> <p>Hej Hej</p>"
   },
   {
     "id": 2,
     "firstName": "Sara",
-    "lastName": "Zancotti"
+    "lastName": "Zancotti",
+    "info": "<h1>Title</h1> <p>Hej Hej</p>"
   },
   {
     "id": 3,
     "firstName": "Zekija",
-    "lastName": "Zancotti"
+    "lastName": "Zancotti",
+    "info": "<h1>Title</h1> <p>Hej Hej</p>"
   },
   {
     "id": 4,
     "firstName": "Amadeus",
-    "lastName": "Hein"
+    "lastName": "Hein",
+    "info": "<h1>Title</h1> <p>Hej Hej</p>"
   }
 ]

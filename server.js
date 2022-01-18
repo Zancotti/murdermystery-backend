@@ -41,6 +41,8 @@ const PersonSchema = new mongoose.Schema({
   id: Number,
   firstName: String,
   lastName: String,
+  image: String,
+  info: String,
 });
 
 const Person = mongoose.model("Person", PersonSchema);
@@ -64,30 +66,31 @@ const MailSchema = new mongoose.Schema({
 
 const Mail = mongoose.model("Mail", MailSchema);
 
-if (process.env.RESET_DATABASE) {
-  const seedDatabase = async () => {
-    await User.deleteMany({});
-    await Person.deleteMany({});
-    await File.deleteMany({});
-    await Mail.deleteMany({});
+// if (process.env.RESET_DATABASE) {
+const seedDatabase = async () => {
+  console.log("Seeding database");
+  await User.deleteMany({});
+  await Person.deleteMany({});
+  await File.deleteMany({});
+  await Mail.deleteMany({});
 
-    personData.forEach(async (person) => {
-      const newPerson = new Person(person);
-      await newPerson.save();
-    });
+  personData.forEach(async (person) => {
+    const newPerson = new Person(person);
+    await newPerson.save();
+  });
 
-    filesData.forEach(async (file) => {
-      const newFile = new File(file);
-      await newFile.save();
-    });
+  filesData.forEach(async (file) => {
+    const newFile = new File(file);
+    await newFile.save();
+  });
 
-    MailsData.forEach(async (mail) => {
-      const newMail = new Mail(mail);
-      await newMail.save();
-    });
-  };
-  seedDatabase();
-}
+  MailsData.forEach(async (mail) => {
+    const newMail = new Mail(mail);
+    await newMail.save();
+  });
+};
+seedDatabase();
+// }
 
 const authenticateUser = async (req, res, next) => {
   const accessToken = req.header("Authorization");
@@ -154,7 +157,7 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-app.post("/signin", async (req, res) => {
+app.post("/", async (req, res) => {
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email: email.toLowerCase() });
@@ -190,19 +193,19 @@ app.post("/signin", async (req, res) => {
   }
 });
 
-app.get("/mails", authenticateUser);
+// app.get("/mails", authenticateUser);
 app.get("/mails", async (req, res) => {
   const mails = await Mail.find();
   res.json(mails);
 });
 
-app.get("/persons", authenticateUser);
+// app.get("/persons", authenticateUser);
 app.get("/persons", async (req, res) => {
   const persons = await Person.find();
   res.json(persons);
 });
 
-app.get("/files", authenticateUser);
+// app.get("/files", authenticateUser);
 app.get("/files", async (req, res) => {
   const files = await File.find();
   res.json(files);
