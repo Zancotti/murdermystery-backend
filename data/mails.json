@@ -1,34 +1,34 @@
 [
   {
-    "id": 1,
-    "subject": "Hej Hej",
-    "text": "Jag tycker om dig",
-    "from": "Sabrina Zancotti",
+    "subject": "Welcome to the team",
+    "from": "Owen Mathews",
+    "image": "owen.jpg",
+    "timeStamp": "2022-01-01",
     "unread": true,
-    "timeStamp": "2021-12-30"
+    "text": "Hey there,<br/><br/>Great to finally have you on our squad, hope you will settle in alright. I trust that you will make yourself at home. There's not a lot of time to get you up to speed, we have assigned you to a new case already.<br/><br/>You've already found the <strong>Inbox</strong>. Here you'll find emails from your colleagues as you advance your investigation. They can contain leads that may help you so if you see the little red unread symbol, be sure to check it out.<br/><br/>Next up is the <strong>Person's database</strong>. Here you can look up any persons that are mentioned in the information you've gathered. Note that you have to search for the exact name (both first and last name).<br/><br/>The <strong>File's database</strong> works just like the Person's database, there you'll find important documents related to the case. Our system is a little special though, so you'll have to search for the exact file id to get a match.<br/><br/>Finally, there's the <strong>Final report</strong>. When you feel you are ready to submit your final report to me you can fill it in. We'll go through the case together and evaluate how you did.<br/><br/>Best regards<br/>Owen"
   },
   {
-    "id": 2,
-    "subject": "Hej Hej",
-    "text": "Wawaweeewaaa",
-    "from": "Sabrina Zancotti",
+    "subject": "New Case: Death of a Tech CEO",
+    "from": "Owen Mathews",
+    "image": "owen.jpg",
     "unread": true,
-    "timeStamp": "2021-12-30"
+    "timeStamp": "2022-01-02",
+    "text": "Hey again,<br/><br/>Call came in today, <strong>Steven Fisher</strong> (yes <i>the</i> Steven Fisher, CEO and founder of Bookface and Chirper) was found dead in his home. Officers at the scene reported that everything seems to point to an unlucky accident, he was found at the bottom of the stairs with a broken neck.<br/><br/>I don't know if it's just me, but I got a funny feeling about this one. There's been a lot of drama in the family recently, concerning some <i>interesting</i> images posted by his son. Also, powerful people make a lot of enemies, I'm just thinking we should at least dig a little deeper, you know?<br/><br/>A good place to start might be to look up the report the Officer's made, should be documented under <strong>CSI#772</strong>. Dig around a bit and when you're ready, submit a final report to me and we can evaluate the case together.<br/><br/>Good luck trooper,<br/>Owen"
   },
   {
-    "id": 3,
     "subject": "Potatismos",
     "text": "Jag tycker om dig",
     "from": "Sabrina Zancotti",
     "unread": true,
-    "timeStamp": "2021-12-30"
+    "timeStamp": "2021-12-30",
+    "image": "owen.jpg"
   },
   {
-    "id": 4,
     "subject": "Älskling",
     "text": "Jag tycker om dig",
     "from": "Sabrina Zancotti",
     "unread": true,
-    "timeStamp": "2021-12-30"
+    "timeStamp": "2021-12-30",
+    "image": "owen.jpg"
   }
 ]

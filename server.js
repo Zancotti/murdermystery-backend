@@ -56,12 +56,12 @@ const FileSchema = new mongoose.Schema({
 const File = mongoose.model("File", FileSchema);
 
 const MailSchema = new mongoose.Schema({
-  id: Number,
   subject: String,
   text: String,
   from: String,
   unread: Boolean,
   timeStamp: Date,
+  image: String,
 });
 
 const Mail = mongoose.model("Mail", MailSchema);
