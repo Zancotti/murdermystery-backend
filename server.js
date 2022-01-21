@@ -38,17 +38,23 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model("User", UserSchema);
 
 const PersonSchema = new mongoose.Schema({
-  id: Number,
+  socialSecurityNumber: String,
   firstName: String,
   lastName: String,
   image: String,
   info: String,
+  dateOfBirth: String,
+  placeOfBirth: String,
+  height: String,
+  eyes: String,
+  hair: String,
+  bloodType: String,
+  triggersEvent: String,
 });
 
 const Person = mongoose.model("Person", PersonSchema);
 
 const FileSchema = new mongoose.Schema({
-  id: Number,
   fileId: String,
   name: String,
 });
@@ -62,6 +68,7 @@ const MailSchema = new mongoose.Schema({
   unread: Boolean,
   timeStamp: Date,
   image: String,
+  event: String,
 });
 
 const Mail = mongoose.model("Mail", MailSchema);

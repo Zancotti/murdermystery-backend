@@ -1,17 +1,22 @@
 [
   {
-    "id": 1,
     "fileId": "CSI#427",
     "name": "Crime Scene investigation"
   },
   {
-    "id": 2,
     "fileId": "TR#538",
     "name": "Telephone Records"
   },
   {
-    "id": 3,
     "fileId": "FPA#228",
     "name": "Finger Print Analysis"
+  },
+  {
+    "fileId": "SL#532",
+    "name": "Stafflist"
+  },
+  {
+    "fileId": "BF#983",
+    "name": "Bookface employeés"
   }
 ]
