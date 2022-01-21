@@ -1,7 +1,8 @@
 [
   {
     "fileId": "CSI#772",
-    "name": "Crime Scene investigation"
+    "name": "Crime Scene investigation",
+    "info": "<h1>Incident description</h1><p>At 17:45, a police patrol arrived at the Fisher residence at 22 Bellevue Road in Silicon Valley, CA after recieving a distress call.</p><p>Upon entering, at the foot of the stairs, the officers found the body of a slender man who was later identified to be Steven Fisher. The body laid face down with both legs remaining partially on the stairs. The policemen confirmed lack of vitals and called for backup units and an ambulance shortly after.</p><p>Officers at the scene interviewed Alicia Stone (the Fisher's maid) who found the body, but she hadn't seen or heard anything out of the ordinary.</p><h1>Crime scene description</h1><p>Looking at the residential property there were no signs of burglary. The doors were locked and no windows were found damaged.</p><p>No traces of struggle were found in the upstairs office of Steven Fisher.</p><h1>More information</h1>Coroner's Report (<strong>CR#239</strong>)"
   },
   {
     "fileId": "TR#538",
@@ -18,5 +19,10 @@
   {
     "fileId": "BF#983",
     "name": "Bookface employeés"
+  },
+  {
+    "fileId": "CR#239",
+    "name": "Coroners Report",
+    "info": "<h1>Coroner's report</h1><strong>Post mortem autopsy report:</strong> Steven Fisher<br/>Body of a man aged 63<br/><p>Alchohol and intoxicating substances in the blood was not present.</p><h2>Autopsy</h2><p>Bruises and damage on the face and on the left side of the neck. The back is broken in several places. Left shoulder is twisted and cracked.</p><h2>Cause of death</h2><p>Extensive trauma to the head, disruption of the nervous system. Likely as a result of a fall from height.<p/>"
   }
 ]

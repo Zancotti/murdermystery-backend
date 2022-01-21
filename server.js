@@ -57,6 +57,7 @@ const Person = mongoose.model("Person", PersonSchema);
 const FileSchema = new mongoose.Schema({
   fileId: String,
   name: String,
+  info: String,
 });
 
 const File = mongoose.model("File", FileSchema);
