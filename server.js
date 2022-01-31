@@ -8,10 +8,6 @@ import filesData from "./data/files.json";
 import MailsData from "./data/mails.json";
 import bcrypt from "bcrypt-nodejs";
 
-// Defines the port the app will run on. Defaults to 8080, but can be
-// overridden when starting the server. For example:
-//
-//   PORT=9000 npm start
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/murdermystery";
 mongoose
   .connect(mongoUrl, {
