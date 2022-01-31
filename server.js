@@ -127,12 +127,11 @@ initGuest();
 const port = process.env.PORT || 8080;
 const app = express();
 
-// Add middlewares to enable cors and json body parsing
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/media", express.static("public"));
 
-// Start defining your routes here
+// ----------------Routes------------------
 
 app.post("/signup", async (req, res) => {
   const { email, password } = req.body;
