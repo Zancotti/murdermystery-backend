@@ -72,6 +72,7 @@ const Mail = mongoose.model("Mail", MailSchema);
 
 const SaveSchema = new mongoose.Schema({
   accessedFileList: String,
+  mailList: String,
   triggeredEvents: String,
   accessedPersonList: String,
   userEmail: {
@@ -82,31 +83,31 @@ const SaveSchema = new mongoose.Schema({
 
 const Save = mongoose.model("Save", SaveSchema);
 
-// if (process.env.RESET_DATABASE) {
-const seedDatabase = async () => {
-  console.log("Seeding database");
-  await User.deleteMany({});
-  await Person.deleteMany({});
-  await File.deleteMany({});
-  await Mail.deleteMany({});
+if (process.env.RESET_DATABASE) {
+  const seedDatabase = async () => {
+    console.log("Seeding database");
+    await User.deleteMany({});
+    await Person.deleteMany({});
+    await File.deleteMany({});
+    await Mail.deleteMany({});
 
-  personData.forEach(async (person) => {
-    const newPerson = new Person(person);
-    await newPerson.save();
-  });
+    personData.forEach(async (person) => {
+      const newPerson = new Person(person);
+      await newPerson.save();
+    });
 
-  filesData.forEach(async (file) => {
-    const newFile = new File(file);
-    await newFile.save();
-  });
+    filesData.forEach(async (file) => {
+      const newFile = new File(file);
+      await newFile.save();
+    });
 
-  MailsData.forEach(async (mail) => {
-    const newMail = new Mail(mail);
-    await newMail.save();
-  });
-};
-seedDatabase();
-// }
+    MailsData.forEach(async (mail) => {
+      const newMail = new Mail(mail);
+      await newMail.save();
+    });
+  };
+  seedDatabase();
+}
 
 const authenticateUser = async (req, res, next) => {
   const accessToken = req.header("Authorization");
@@ -208,14 +209,20 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-// app.post("/save", authenticateUser);
+app.post("/save", authenticateUser);
 app.post("/save", async (req, res) => {
-  const { accessedFileList, triggeredEvents, accessedPersonList, userEmail } =
-    req.body;
+  const {
+    accessedFileList,
+    mailList,
+    triggeredEvents,
+    accessedPersonList,
+    userEmail,
+  } = req.body;
 
   try {
     const saveObject = {
       accessedFileList: JSON.stringify(accessedFileList),
+      mailList: JSON.stringify(mailList),
       triggeredEvents: JSON.stringify(triggeredEvents),
       accessedPersonList: JSON.stringify(accessedPersonList),
       userEmail,
@@ -239,37 +246,43 @@ app.post("/save", async (req, res) => {
   }
 });
 
-// app.post("/load", authenticateUser);
+app.post("/load", authenticateUser);
 app.post("/load", async (req, res) => {
   const { userEmail } = req.body;
 
   const save = await Save.findOne({ userEmail });
-  const saveObject = {
-    accessedFileList: JSON.parse(save.accessedFileList),
-    triggeredEvents: JSON.parse(save.triggeredEvents),
-    accessedPersonList: JSON.parse(save.accessedPersonList),
-    userEmail,
-  };
 
-  res.json(saveObject);
+  if (save) {
+    const saveObject = {
+      accessedFileList: JSON.parse(save.accessedFileList),
+      mailList: JSON.parse(save.mailList),
+      triggeredEvents: JSON.parse(save.triggeredEvents),
+      accessedPersonList: JSON.parse(save.accessedPersonList),
+      userEmail,
+    };
+
+    res.status(200).json(saveObject);
+  } else {
+    res.status(404).json({ response: {}, success: false });
+  }
 });
 
-// app.get("/mails", authenticateUser);
+app.get("/mails", authenticateUser);
 app.get("/mails", async (req, res) => {
   const mails = await Mail.find();
-  res.json(mails);
+  res.status(200).json(mails);
 });
 
-// app.get("/persons", authenticateUser);
+app.get("/persons", authenticateUser);
 app.get("/persons", async (req, res) => {
   const persons = await Person.find();
-  res.json(persons);
+  res.status(200).json(persons);
 });
 
-// app.get("/files", authenticateUser);
+app.get("/files", authenticateUser);
 app.get("/files", async (req, res) => {
   const files = await File.find();
-  res.json(files);
+  res.status(200).json(files);
 });
 
 // Start the server
