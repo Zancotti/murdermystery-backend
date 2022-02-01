@@ -70,6 +70,18 @@ const MailSchema = new mongoose.Schema({
 
 const Mail = mongoose.model("Mail", MailSchema);
 
+const SaveSchema = new mongoose.Schema({
+  accessedFileList: String,
+  triggeredEvents: String,
+  accessedPersonList: String,
+  userEmail: {
+    type: String,
+    unique: true,
+  },
+});
+
+const Save = mongoose.model("Save", SaveSchema);
+
 // if (process.env.RESET_DATABASE) {
 const seedDatabase = async () => {
   console.log("Seeding database");
@@ -133,33 +145,6 @@ app.use("/media", express.static("public"));
 
 // ----------------Routes------------------
 
-app.post("/signup", async (req, res) => {
-  const { email, password } = req.body;
-  try {
-    const salt = bcrypt.genSaltSync();
-
-    if (password.length < 5) {
-      throw "Password must be at least 5 characters long";
-    }
-    const newUser = new User({
-      email: email.toLowerCase(),
-      password: bcrypt.hashSync(password, salt),
-    });
-
-    await newUser.save();
-    res.status(201).json({
-      response: {
-        id: newUser._id,
-        accessToken: newUser.accessToken,
-        email: newUser.email,
-      },
-      success: true,
-    });
-  } catch (error) {
-    res.status(400).json({ response: error, success: false });
-  }
-});
-
 app.post("/", async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -194,6 +179,79 @@ app.post("/", async (req, res) => {
   } catch (error) {
     res.status(404).json({ response: error, success: false });
   }
+});
+
+app.post("/signup", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const salt = bcrypt.genSaltSync();
+
+    if (password.length < 5) {
+      throw "Password must be at least 5 characters long";
+    }
+    const newUser = new User({
+      email: email.toLowerCase(),
+      password: bcrypt.hashSync(password, salt),
+    });
+
+    await newUser.save();
+    res.status(201).json({
+      response: {
+        id: newUser._id,
+        accessToken: newUser.accessToken,
+        email: newUser.email,
+      },
+      success: true,
+    });
+  } catch (error) {
+    res.status(400).json({ response: error, success: false });
+  }
+});
+
+// app.post("/save", authenticateUser);
+app.post("/save", async (req, res) => {
+  const { accessedFileList, triggeredEvents, accessedPersonList, userEmail } =
+    req.body;
+
+  try {
+    const saveObject = {
+      accessedFileList: JSON.stringify(accessedFileList),
+      triggeredEvents: JSON.stringify(triggeredEvents),
+      accessedPersonList: JSON.stringify(accessedPersonList),
+      userEmail,
+    };
+    const save = await Save.findOne({ userEmail });
+
+    if (save) {
+      await Save.updateOne({ userEmail }, saveObject);
+    } else {
+      const newSave = new Save(saveObject);
+
+      await newSave.save();
+    }
+
+    res.status(201).json({
+      response: {},
+      success: true,
+    });
+  } catch (error) {
+    res.status(400).json({ response: error, success: false });
+  }
+});
+
+// app.post("/load", authenticateUser);
+app.post("/load", async (req, res) => {
+  const { userEmail } = req.body;
+
+  const save = await Save.findOne({ userEmail });
+  const saveObject = {
+    accessedFileList: JSON.parse(save.accessedFileList),
+    triggeredEvents: JSON.parse(save.triggeredEvents),
+    accessedPersonList: JSON.parse(save.accessedPersonList),
+    userEmail,
+  };
+
+  res.json(saveObject);
 });
 
 // app.get("/mails", authenticateUser);
