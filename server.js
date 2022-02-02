@@ -117,10 +117,10 @@ const authenticateUser = async (req, res, next) => {
     if (user) {
       next();
     } else {
-      res.status(404).json({ response: "Please, log in", success: false });
+      res.status(404).json({ content: {}, success: false });
     }
   } catch (error) {
-    res.status(400).json({ response: error, success: false });
+    res.status(400).json({ content: {}, success: false });
   }
 };
 
@@ -153,8 +153,8 @@ app.post("/", async (req, res) => {
 
     if (user.email === "guest@guest.com") {
       return res.status(200).json({
-        response: {
-          Id: user._id,
+        content: {
+          id: user._id,
           email: email,
           accessToken: user.accessToken,
         },
@@ -164,21 +164,21 @@ app.post("/", async (req, res) => {
 
     if (user && bcrypt.compareSync(password, user.password)) {
       return res.status(200).json({
-        response: {
-          Id: user._id,
+        content: {
+          id: user._id,
           email: email,
           accessToken: user.accessToken,
         },
         success: true,
       });
     } else {
-      res.status(404).json({
-        response: "User email or password doesn't match",
+      res.status(200).json({
+        content: {},
         success: false,
       });
     }
   } catch (error) {
-    res.status(404).json({ response: error, success: false });
+    res.status(200).json({ content: {}, success: false });
   }
 });
 
@@ -197,7 +197,7 @@ app.post("/signup", async (req, res) => {
 
     await newUser.save();
     res.status(201).json({
-      response: {
+      content: {
         id: newUser._id,
         accessToken: newUser.accessToken,
         email: newUser.email,
@@ -205,7 +205,7 @@ app.post("/signup", async (req, res) => {
       success: true,
     });
   } catch (error) {
-    res.status(400).json({ response: error, success: false });
+    res.status(200).json({ content: {}, success: false });
   }
 });
 
@@ -238,18 +238,17 @@ app.post("/save", async (req, res) => {
     }
 
     res.status(201).json({
-      response: {},
+      content: {},
       success: true,
     });
   } catch (error) {
-    res.status(400).json({ response: error, success: false });
+    res.status(200).json({ content: {}, success: false });
   }
 });
 
 app.post("/load", authenticateUser);
 app.post("/load", async (req, res) => {
   const { userEmail } = req.body;
-
   const save = await Save.findOne({ userEmail });
 
   if (save) {
@@ -261,28 +260,40 @@ app.post("/load", async (req, res) => {
       userEmail,
     };
 
-    res.status(200).json(saveObject);
+    res.status(200).json({ content: saveObject, success: true });
   } else {
-    res.status(404).json({ response: {}, success: false });
+    res.status(200).json({ content: {}, success: false });
   }
 });
 
 app.get("/mails", authenticateUser);
 app.get("/mails", async (req, res) => {
-  const mails = await Mail.find();
-  res.status(200).json(mails);
+  try {
+    const mails = await Mail.find();
+    res.status(200).json({ content: mails, success: true });
+  } catch (error) {
+    res.status(200).json({ content: {}, success: false });
+  }
 });
 
 app.get("/persons", authenticateUser);
 app.get("/persons", async (req, res) => {
-  const persons = await Person.find();
-  res.status(200).json(persons);
+  try {
+    const persons = await Person.find();
+    res.status(200).json({ content: persons, success: true });
+  } catch (error) {
+    res.status(200).json({ content: {}, success: false });
+  }
 });
 
 app.get("/files", authenticateUser);
 app.get("/files", async (req, res) => {
-  const files = await File.find();
-  res.status(200).json(files);
+  try {
+    const files = await File.find();
+    res.status(200).json({ content: files, success: true });
+  } catch (error) {
+    res.status(200).json({ content: {}, success: false });
+  }
 });
 
 // Start the server
