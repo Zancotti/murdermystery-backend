@@ -2,11 +2,22 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
-import crypto from "crypto";
 import personData from "./data/persons.json";
 import filesData from "./data/files.json";
 import MailsData from "./data/mails.json";
-import bcrypt from "bcrypt-nodejs";
+import Models from "./models";
+import listEndpoints from "express-list-endpoints";
+import {
+  SignInUser,
+  SignUpUser,
+  SaveGame,
+  LoadGame,
+  GetPersons,
+  GetFiles,
+  GetMails,
+} from "./routes";
+
+const { Person, File, Mail, User } = Models;
 
 const mongoUrl = process.env.MONGO_URL || "mongodb://localhost/murdermystery";
 mongoose
@@ -18,75 +29,9 @@ mongoose
   .catch((err) => console.log("Something went wrong!", err));
 mongoose.Promise = Promise;
 
-const UserSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    unique: true,
-    required: true,
-  },
-  password: { type: String, required: true },
-  accessToken: {
-    type: String,
-    default: () => crypto.randomBytes(128).toString("hex"),
-  },
-});
-
-const User = mongoose.model("User", UserSchema);
-
-const PersonSchema = new mongoose.Schema({
-  socialSecurityNumber: String,
-  firstName: String,
-  lastName: String,
-  image: String,
-  info: String,
-  dateOfBirth: String,
-  placeOfBirth: String,
-  height: String,
-  eyes: String,
-  hair: String,
-  bloodType: String,
-  triggersEvent: String,
-});
-
-const Person = mongoose.model("Person", PersonSchema);
-
-const FileSchema = new mongoose.Schema({
-  fileId: String,
-  name: String,
-  info: String,
-});
-
-const File = mongoose.model("File", FileSchema);
-
-const MailSchema = new mongoose.Schema({
-  subject: String,
-  text: String,
-  from: String,
-  unread: Boolean,
-  timeStamp: Date,
-  image: String,
-  event: String,
-});
-
-const Mail = mongoose.model("Mail", MailSchema);
-
-const SaveSchema = new mongoose.Schema({
-  accessedFileList: String,
-  mailList: String,
-  triggeredEvents: String,
-  accessedPersonList: String,
-  userEmail: {
-    type: String,
-    unique: true,
-  },
-});
-
-const Save = mongoose.model("Save", SaveSchema);
-
 if (process.env.RESET_DATABASE) {
   const seedDatabase = async () => {
     console.log("Seeding database");
-    await User.deleteMany({});
     await Person.deleteMany({});
     await File.deleteMany({});
     await Mail.deleteMany({});
@@ -134,7 +79,6 @@ const initGuest = async () => {
     await guest.save();
   }
 };
-
 initGuest();
 
 const port = process.env.PORT || 8080;
@@ -146,155 +90,28 @@ app.use("/media", express.static("public"));
 
 // ----------------Routes------------------
 
-app.post("/", async (req, res) => {
-  const { email, password } = req.body;
-  try {
-    const user = await User.findOne({ email: email.toLowerCase() });
-
-    if (user.email === "guest@guest.com") {
-      return res.status(200).json({
-        content: {
-          id: user._id,
-          email: email,
-          accessToken: user.accessToken,
-        },
-        success: true,
-      });
-    }
-
-    if (user && bcrypt.compareSync(password, user.password)) {
-      return res.status(200).json({
-        content: {
-          id: user._id,
-          email: email,
-          accessToken: user.accessToken,
-        },
-        success: true,
-      });
-    } else {
-      res.status(200).json({
-        content: {},
-        success: false,
-      });
-    }
-  } catch (error) {
-    res.status(200).json({ content: {}, success: false });
-  }
+app.get("/", (req, res) => {
+  res.send(listEndpoints(app));
 });
 
-app.post("/signup", async (req, res) => {
-  const { email, password } = req.body;
-  try {
-    const salt = bcrypt.genSaltSync();
+app.post("/", SignInUser);
 
-    if (password.length < 5) {
-      throw "Password must be at least 5 characters long";
-    }
-    const newUser = new User({
-      email: email.toLowerCase(),
-      password: bcrypt.hashSync(password, salt),
-    });
-
-    await newUser.save();
-    res.status(201).json({
-      content: {
-        id: newUser._id,
-        accessToken: newUser.accessToken,
-        email: newUser.email,
-      },
-      success: true,
-    });
-  } catch (error) {
-    res.status(200).json({ content: {}, success: false });
-  }
-});
+app.post("/signup", SignUpUser);
 
 app.post("/save", authenticateUser);
-app.post("/save", async (req, res) => {
-  const {
-    accessedFileList,
-    mailList,
-    triggeredEvents,
-    accessedPersonList,
-    userEmail,
-  } = req.body;
-
-  try {
-    const saveObject = {
-      accessedFileList: JSON.stringify(accessedFileList),
-      mailList: JSON.stringify(mailList),
-      triggeredEvents: JSON.stringify(triggeredEvents),
-      accessedPersonList: JSON.stringify(accessedPersonList),
-      userEmail,
-    };
-    const save = await Save.findOne({ userEmail });
-
-    if (save) {
-      await Save.updateOne({ userEmail }, saveObject);
-    } else {
-      const newSave = new Save(saveObject);
-
-      await newSave.save();
-    }
-
-    res.status(201).json({
-      content: {},
-      success: true,
-    });
-  } catch (error) {
-    res.status(200).json({ content: {}, success: false });
-  }
-});
+app.post("/save", SaveGame);
 
 app.post("/load", authenticateUser);
-app.post("/load", async (req, res) => {
-  const { userEmail } = req.body;
-  const save = await Save.findOne({ userEmail });
-
-  if (save) {
-    const saveObject = {
-      accessedFileList: JSON.parse(save.accessedFileList),
-      mailList: JSON.parse(save.mailList),
-      triggeredEvents: JSON.parse(save.triggeredEvents),
-      accessedPersonList: JSON.parse(save.accessedPersonList),
-      userEmail,
-    };
-
-    res.status(200).json({ content: saveObject, success: true });
-  } else {
-    res.status(200).json({ content: {}, success: false });
-  }
-});
-
-app.get("/mails", authenticateUser);
-app.get("/mails", async (req, res) => {
-  try {
-    const mails = await Mail.find();
-    res.status(200).json({ content: mails, success: true });
-  } catch (error) {
-    res.status(200).json({ content: {}, success: false });
-  }
-});
-
-app.get("/persons", authenticateUser);
-app.get("/persons", async (req, res) => {
-  try {
-    const persons = await Person.find();
-    res.status(200).json({ content: persons, success: true });
-  } catch (error) {
-    res.status(200).json({ content: {}, success: false });
-  }
-});
+app.post("/load", LoadGame);
 
 app.get("/files", authenticateUser);
-app.get("/files", async (req, res) => {
-  try {
-    const files = await File.find();
-    res.status(200).json({ content: files, success: true });
-  } catch (error) {
-    res.status(200).json({ content: {}, success: false });
-  }
-});
+app.get("/files", GetFiles);
+
+app.get("/mails", authenticateUser);
+app.get("/mails", GetMails);
+
+app.get("/persons", authenticateUser);
+app.get("/persons", GetPersons);
 
 // Start the server
 app.listen(port, () => {
