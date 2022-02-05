@@ -82,9 +82,9 @@
   {
     "socialSecurityNumber": "850124-8119",
     "firstName": "Robert",
-    "lastName": "Dellaware",
+    "lastName": "Delaware",
     "image": "robert.jpg",
-    "info": "<h1>Description</h1><p>Robert is the gardener and handyman at the Fisher residence. He has worked for the Fisher's for 10 years and the majestic gardens surrounding the residence are his masterpieces.</p>",
+    "info": "<h1>Description</h1><p>Robert is the gardener and handyman at the Fisher residence. He has worked for the Fisher's for 10 years and the majestic gardens surrounding the residence are his masterpieces.</p><p>Interrogation with Robert Delaware (<strong>INT#133</strong>)</p>",
     "dateOfBirth": "1985-01-24",
     "placeOfBirth": "Los Angeles, CA",
     "height": "190 cm",
@@ -108,14 +108,53 @@
   {
     "socialSecurityNumber": "900628-4352",
     "firstName": "Trevor",
-    "lastName": "Allen",
+    "lastName": "Banica",
     "image": "trevor.jpg",
-    "info": "<h1>Title</h1> <p>Hej Hej</p>",
+    "info": "<h1>Description</h1> <p>Trevor is a Project Manager at Bookface Ltd. He is known for his clever ways of motivating the people he works with.</p>",
     "dateOfBirth": "1990-06-28",
     "placeOfBirth": "Las Vegas, CA",
     "height": "182 cm",
     "eyes": "Brown",
     "hair": "Brown",
     "bloodType": "B+"
+  },
+  {
+    "socialSecurityNumber": "840316-1236",
+    "firstName": "Natasha",
+    "lastName": "Sandhau",
+    "image": "natasha.jpg",
+    "info": "<h1>Description</h1> <p>Natasha is the brain behind the beautiful design of the social platforms Bookface and Chirper.</p>",
+    "dateOfBirth": "1984-03-16",
+    "placeOfBirth": "Boston, MA",
+    "height": "163 cm",
+    "eyes": "Brown",
+    "hair": "Brown",
+    "bloodType": "0+"
+  },
+  {
+    "socialSecurityNumber": "760102-3336",
+    "firstName": "Melinda",
+    "lastName": "Hedarian",
+    "image": "melinda.jpg",
+    "info": "<h1>Description</h1> <p>Melinda is one of the most prominent developers at Bookface. She often attends conferences as a speaker and is well liked throughout the developer community.</p>",
+    "dateOfBirth": "1976-01-02",
+    "placeOfBirth": "New York, NY",
+    "height": "170 cm",
+    "eyes": "Brown",
+    "hair": "Brown",
+    "bloodType": "AB+"
+  },
+  {
+    "socialSecurityNumber": "851210-4455",
+    "firstName": "Ali",
+    "lastName": "Wickerman",
+    "image": "ali.jpg",
+    "info": "<h1>Description</h1> <p>Ali is a skilled developer with a passion for Open Source projects. He tries to spearhead the development of social platforms to make the accessable for everyone.</p>",
+    "dateOfBirth": "1985-12-10",
+    "placeOfBirth": "Paris, France",
+    "height": "176 cm",
+    "eyes": "Brown",
+    "hair": "Brown",
+    "bloodType": "B-"
   }
 ]

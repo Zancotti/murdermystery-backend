@@ -5,21 +5,9 @@
     "info": "<h1>Incident description</h1><p>At 17:45, a police patrol arrived at the Fisher residence at 22 Bellevue Road in Silicon Valley, CA after recieving a distress call.</p><p>Upon entering, at the foot of the stairs, the officers found the body of a slender man who was later identified to be Steven Fisher. The body laid face down with both legs remaining partially on the stairs. The policemen confirmed lack of vitals and called for backup units and an ambulance shortly after.</p><p>Officers at the scene interviewed Alicia Stone (the Fisher's maid) who found the body, but she hadn't seen or heard anything out of the ordinary.</p><h1>Crime scene description</h1><p>Looking at the residential property there were no signs of burglary. The doors were locked and no windows were found damaged.</p><p>No traces of struggle were found in the upstairs office of Steven Fisher.</p><h1>More information</h1>Coroner's Report (<strong>CR#239</strong>)"
   },
   {
-    "fileId": "TR#538",
-    "name": "Telephone Records"
-  },
-  {
-    "fileId": "FPA#228",
-    "name": "Finger Print Analysis"
-  },
-  {
-    "fileId": "SL#532",
-    "name": "Stafflist"
-  },
-  {
     "fileId": "BF#113",
     "name": "Bookface Stafflist",
-    "info": "<h1>Bookface Staff List</h1><ul><li>Steven Fisher (CEO)</li><li>Catherine Price (CTO/Head of development)</li></ul>"
+    "info": "<h1>Bookface Staff List</h1><p>An excerpt from the Bookface staff list.</p><ul><li>Steven Fisher (CEO)</li><li>Catherine Price (CTO/Head of development)</li><li>Natasha Sandhau (UX Expert)</li><li>Trevor Banica (Project Manager)</li><li>Melinda Hedarian (Developer)</li><li>Ali Wickerman (Developer)</li></ul>"
   },
   {
     "fileId": "CR#239",
@@ -68,14 +56,14 @@
     "info": "<h1>Interrogation</h1><p>Patrial transcript of interrogation with Alicia Stone.</p><p>Officer: What can you tell me about the day Steven was found dead, anything out of the ordinary?</p><p>Alicia Stone: No, nothing I can think of. Mind you, I spend most of my time inside the kitchen.</p><p>Officer: And you were in the kitchen during the afternoon as well? Alone?</p><p>Alicia Stone: In the kitchen yes, but not alone. I had help that day from Gary.</p>"
   },
   {
-    "fileId": "INT#400",
+    "fileId": "INT#133",
     "name": "Interrogation - Robert Delaware",
     "info": "<h1>Interrogation</h1><p>Patrial transcript of interrogation with Robert Delaware.</p><p>Officer: What can you tell me about the day Steven was found dead, anything out of the ordinary?</p><p>Robert Delaware: Out of the ordinary? No... why would anything be out of the ordinary. It was a normal day.</p><p>Officer: What about the meeting you had with Robert?</p><p>Robert Delaware: Oh, just a regular meeting. He wanted to talk about a new garden project on the east side of the residence.</p><p>Officer: Right. And where were you during the afternoon?</p><p>Robert Delaware: Well... after the meeting at about 17.15 I left the residence to head home.</p><p>Officer: Did anyone see you during this time, that can corroborate this?</p><p>Robert Delaware: Eeh.. no, not really.</p>",
     "triggersEvent": "delaware"
   },
   {
     "fileId": "TEL#678",
-    "name": "Interrogation - Robert Delaware",
+    "name": "Delaware's Phone",
     "info": "<h1>Delaware's Phone</h1><p>The IT forensic team has analyzed Robert Delaware's phone and found several interesting things.</p><p>Photos: A large number of photos of Ellen Fisher, that looks like they've been taken without her knowing. Many of them seem intimate.</p><p>Tracker: A GPS tracker that track's Ellen's movements, and records of her daily routines.</p><p>SMS: A text message from an unknown number mentioning 'He is on to you'.</p>",
     "triggersEvent": "delaware2"
   },

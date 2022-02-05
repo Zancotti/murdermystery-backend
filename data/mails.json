@@ -51,16 +51,16 @@
     "image": "elsa.jpg",
     "unread": true,
     "timeStamp": "2022-01-02",
-    "text": "<p>Since Robert Delaware was the last known person who saw Steven Fisher, we decided to search through his phone.You can see the findings at <strong>TEL#678</strong></p>",
+    "text": "<p>Since Robert Delaware was the last known person who saw Steven Fisher, we decided to search through his phone. You can see the findings at <strong>TEL#678</strong></p>",
     "event": ["delaware"]
   },
   {
-    "subject": "Delawares Telefone",
-    "from": "Elsa Wilson",
-    "image": "elsa.jpg",
+    "subject": "Further interogations",
+    "from": "Owen Matthews",
+    "image": "owen.jpg",
     "unread": true,
     "timeStamp": "2022-01-02",
-    "text": "<p>Since Robert Delaware was the last known person who saw Steven Fisher, we decided to search through his phone.You can see the findings at <strong>TEL#678</strong></p>",
-    "event": ["delaware"]
+    "text": "<p>Alright, I think we have all we need to bring in Robert Delaware for a second interrogation. Maybe he can explain the contents of his phone. The interrogation will be recorded here: <strong>INT#203</strong></p>",
+    "event": ["delaware2"]
   }
 ]
