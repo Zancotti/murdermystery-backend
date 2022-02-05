@@ -37,6 +37,7 @@ const FileSchema = new mongoose.Schema({
   fileId: String,
   name: String,
   info: String,
+  triggersEvent: String,
 });
 
 const File = mongoose.model("File", FileSchema);
@@ -48,7 +49,7 @@ const MailSchema = new mongoose.Schema({
   unread: Boolean,
   timeStamp: Date,
   image: String,
-  event: String,
+  event: [{ type: String }],
 });
 
 const Mail = mongoose.model("Mail", MailSchema);
