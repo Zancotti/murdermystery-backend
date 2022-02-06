@@ -1,7 +1,11 @@
-# Express Starter Project
+# Murder Mystery
 
-This project includes the packages and babel setup for an express server, and is just meant to make things a little simpler to get up and running with.
+This online game was made by Sabrina Zancotti as my final project for the
+Technigo frontend developer bootcamp 2021/2022.
 
-## Getting started
+The frontend of Murder Mystery was developed in React JS and Redux. The backend
+was developed in Node.js using Express API, Moongose and MongoDB for the
+backend.
 
-Install dependencies with `npm install`, then start the server by running `npm run dev`
+Link to the frontend repository:
+https://github.com/Zancotti/murdermystery
