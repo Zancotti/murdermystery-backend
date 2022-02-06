@@ -1,27 +1,27 @@
 [
   {
     "fileId": "CSI#772",
-    "name": "Crime Scene investigation",
-    "info": "<h1>Incident description</h1><p>At 17:45, a police patrol arrived at the Fisher residence at 22 Bellevue Road in Silicon Valley, CA after recieving a distress call.</p><p>Upon entering, at the foot of the stairs, the officers found the body of a slender man who was later identified to be Steven Fisher. The body laid face down with both legs remaining partially on the stairs. The policemen confirmed lack of vitals and called for backup units and an ambulance shortly after.</p><p>Officers at the scene interviewed Alicia Stone (the Fisher's maid) who found the body, but she hadn't seen or heard anything out of the ordinary.</p><h1>Crime scene description</h1><p>Looking at the residential property there were no signs of burglary. The doors were locked and no windows were found damaged.</p><p>No traces of struggle were found in the upstairs office of Steven Fisher.</p><h1>More information</h1>Coroner's Report (<strong>CR#239</strong>)"
+    "name": "Crime Scene Investigation",
+    "info": "<h1>Incident description</h1><p>At 17:45, a police patrol arrived at the Fisher residence at 22 Bellevue Road in Silicon Valley, CA after recieving a distress call.</p><p>Upon entering, at the foot of the stairs, the officers found the body of a slender man who was later identified to be Steven Fisher. The body laid face down with both legs remaining partially on the stairs. The policemen confirmed lack of vitals and called for backup units and an ambulance shortly after.</p><p>Officers at the scene interviewed <strong>Alicia Stone</strong> (the Fisher's cook) who found the body, but she hadn't seen or heard anything out of the ordinary.</p><h1>Crime scene description</h1><p>Looking at the residential property there were no signs of burglary. The doors were locked and no windows were found damaged.</p><p>No traces of struggle were found in the upstairs office of Steven Fisher.</p><h1>More information</h1>Coroner's Report (<strong>CR#239</strong>)"
   },
   {
     "fileId": "BF#113",
     "name": "Bookface Stafflist",
-    "info": "<h1>Bookface Staff List</h1><p>An excerpt from the Bookface staff list.</p><ul><li>Steven Fisher (CEO)</li><li>Catherine Price (CTO/Head of development)</li><li>Natasha Sandhau (UX Expert)</li><li>Trevor Banica (Project Manager)</li><li>Melinda Hedarian (Developer)</li><li>Ali Wickerman (Developer)</li></ul>"
+    "info": "<p>An excerpt from the Bookface staff list.</p><ul><li>Steven Fisher (CEO)</li><li>Catherine Price (CTO/Head of development)</li><li>Natasha Sandhau (UX Expert)</li><li>Trevor Banica (Project Manager)</li><li>Melinda Hedarian (Developer)</li><li>Ali Wickerman (Developer)</li></ul>"
   },
   {
     "fileId": "CR#239",
-    "name": "Coroners Report",
-    "info": "<h1>Coroner's report</h1><strong>Post mortem autopsy report:</strong> Steven Fisher<br/>Body of a man aged 63<br/><p>Alchohol and intoxicating substances in the blood was not present.</p><h2>Autopsy</h2><p>Bruises and damage on the face and on the left side of the neck. The back is broken in several places. Left shoulder is twisted and cracked.</p><h2>Cause of death</h2><p>Extensive trauma to the head, disruption of the nervous system. Likely as a result of a fall from height.<p/>"
+    "name": "Coroner's Report",
+    "info": "<strong>Post mortem autopsy report:</strong> Steven Fisher<br/>Body of a man aged 63<br/><p>Alchohol and intoxicating substances in the blood was not present.</p><h2>Autopsy</h2><p>Bruises and damage on the face and on the left side of the neck. The back is broken in several places. Left shoulder is twisted and cracked.</p><h2>Cause of death</h2><p>Extensive trauma to the head, disruption of the nervous system. Likely as a result of a fall from height.<p/>"
   },
   {
     "fileId": "BF#85",
     "name": "Company Register",
-    "info": "<h1>Bookface Ltd</h1><p>Bookface is an American online social media and social networking service owned by the Fisher group. Rising to prominence in the early 2000s, Bookface took the internet by storm and now boasts almost 3 billion monthly active users.</p><p>Controversy was sparked in 2019 as former developers of Bookface leaked information regarding the company's data sharing policies, accusing the Fisher group for selling private data to the highest bidder. The Fisher group has denies the accusation, stating that all sales of data is done to aid personalized ads.</p><h1>More information</h1>Bookface Staff List (BF#113)"
+    "info": "<h1>Bookface Ltd</h1><p>Bookface is an American online social media and social networking service owned by the Fisher group. Rising to prominence in the early 2000s, Bookface took the internet by storm and now boasts almost 3 billion monthly active users.</p><p>Controversy was sparked in 2019 as former developers of Bookface leaked information regarding the company's data sharing policies, accusing the Fisher group for selling private data to the highest bidder. The Fisher group has denied the accusation, stating that all sales of data is done to aid personalized ads.</p><h1>More information</h1>Bookface Staff List (<strong>BF#113</strong>)"
   },
   {
     "fileId": "LAT#223",
-    "name": "Newspaper article",
+    "name": "LA: Times - Article",
     "info": "<h1>2020: The 10 Most Powerful People in Tech</h1><p>Here are this year's most powerful movers and shakers in tech.</p><p>With the tech industry advancing at light speed, there are plenty of fresh innovators to keep our eye on. There are some new trailblazers on the list, but starting at number one is a familiar face.</p><h2>1. Steven Fisher</h2><p>Best known as the CEO of Bookface and Chirper, Steven Fisher is also sometimes called the King of Socials after dominating the social network market for a long time.</p><p>While both Chirper and Bookface has had their share of controversy over the years, Fisher flexed his muscle when he permanently suspended former President of the United States, Donald Trump, from Chirper.</p><p>The rest of the article has been omitted.</p>"
   },
   {
@@ -33,43 +33,43 @@
   {
     "fileId": "CAL#886",
     "name": "Calendar - Steven Fisher",
-    "info": "<h1>Calendar</h1><p>Steven Fisher's calendar, the day of the murder.</p><p>09.30: Crossfit with PT.</p><p>12.00: Lunch with Henry.</p><p>14.00: Conference call with Bookface Asia department.</p><p>17.00: Meeting with Robert Delaware.</p><p>19.00: Dinner at The Metropolitan with Lizzie and Ellen.</p>"
+    "info": "<p>Steven Fisher's calendar, the day of the murder.</p><p>09.30: Crossfit with PT.</p><p>12.00: Lunch with Henry.</p><p>14.00: Conference call with Bookface Asia department.</p><p>17.00: Meeting with Robert Delaware.</p><p>19.00: Dinner at The Metropolitan with Lizzie and Ellen.</p>"
   },
   {
     "fileId": "INT#476",
-    "name": "Interrogation",
-    "info": "<h1>Interrogation</h1><p>Patrial transcript of interrogation with Catherine Price.</p><p>Officer: Let's look at this SMS conversation we found on Fisher's phone. It doesn't look good, does it?</p><p>Catherine Price: What do you mean?</p><p>Officer: Well, it looks like blackmail to me. And now that person ends up dead.</p><p>Catherine Price: You can be thinking I had anything to do with it! I would never hurt Steven, we've been through a lot together.</p><p>Officer: Then you better start talking. What was this about?</p><p>Catherine Price: The rumours surrounding Bookface selling private data is true. And not only for personalized ads. Fisher has been selling data to the Chinese government. If this information would be leaked, it would spell the end of Bookface as a social platform - no one would want to use it.</p><p>Officer: That's interesting. Where were you on the day of the murder?</p><p>Catherine Price: I was attended DEV-CON, a developer conference as a guest speaker. I have about 800 listeners that can confirm I was there.</p>"
+    "name": "Interrogation - Catherine Price",
+    "info": "<p>Patrial transcript of interrogation with Catherine Price.</p><p>Officer: Let's look at this SMS conversation we found on Fisher's phone. It doesn't look good, does it?</p><p>Catherine Price: What do you mean?</p><p>Officer: Well, it looks like blackmail to me. And now that person ends up dead.</p><p>Catherine Price: You can be thinking I had anything to do with it! I would never hurt Steven, we've been through a lot together.</p><p>Officer: Then you better start talking. What was this about?</p><p>Catherine Price: The rumours surrounding Bookface selling private data is true. And not only for personalized ads. Fisher has been selling data to the Chinese government. If this information would be leaked, it would spell the end of Bookface as a social platform - no one would want to use it.</p><p>Officer: That's interesting. Where were you on the day of the murder?</p><p>Catherine Price: I was attending DEV-CON, a developer conference as a guest speaker. I have about 800 listeners that can confirm I was there.</p>"
   },
   {
     "fileId": "INT#772",
     "name": "Interrogation - Elizabeth Fisher",
-    "info": "<h1>Interrogation</h1><p>Patrial transcript of interrogation with Elizabeth Fisher.</p><p>Officer: I know it's difficult, but could you give me a run down of who were at the Fisher residence around the time of Steven's death?</p><p>Elizabeth Fisher: Myself and my kids, of course. Gary Brimstone, our butler. Alicia Stone, our cook. Oh, and Robert Delaware also - he's our gardener. I heard Steven mention that he had an important meeting with him coming up. I don't know why, though.</p>"
+    "info": "<p>Patrial transcript of interrogation with Elizabeth Fisher.</p><p>Officer: I know it's difficult, but could you give me a run down of who were at the Fisher residence around the time of Steven's death?</p><p>Elizabeth Fisher: Myself and my kids, of course. Gary Brimstone, our butler. Alicia Stone, our cook. Oh, and Robert Delaware also - he's our gardener. I heard Steven mention that he had an important meeting with him coming up. I don't know why, though.</p>"
   },
   {
     "fileId": "INT#224",
     "name": "Interrogation - Gary Brimstone",
-    "info": "<h1>Interrogation</h1><p>Patrial transcript of interrogation with Gary Brimstone.</p><p>Officer: What can you tell me about the day Steven was found dead, anything out of the ordinary?</p><p>Gary Brimstone: Nothing much, regular duties for me around the residence. I noticed Robert seemed pretty worked up for some reason. Something about an important meeting.</p><p>Officer: Robert Delaware?</p><p>Gary Brimstone: Yeah, the gardener.</p><p>Officer: And where were you during the afternoon?</p><p>Gary Brimstone: Me and Alicia, the cook, spent most of the afternoon inside the kitchen cleaning and preparing. We were there when they found Steven. Well, found his body.</p>"
+    "info": "<p>Patrial transcript of interrogation with Gary Brimstone.</p><p>Officer: What can you tell me about the day Steven was found dead, anything out of the ordinary?</p><p>Gary Brimstone: Nothing much, regular duties for me around the residence. I noticed Robert seemed pretty worked up for some reason. Something about an important meeting.</p><p>Officer: Robert Delaware?</p><p>Gary Brimstone: Yeah, the gardener.</p><p>Officer: And where were you during the afternoon?</p><p>Gary Brimstone: Me and Alicia, the cook, spent most of the afternoon inside the kitchen cleaning and preparing. We were there when they found Steven. Well, found his body.</p>"
   },
   {
     "fileId": "INT#004",
     "name": "Interrogation - Alicia Stone",
-    "info": "<h1>Interrogation</h1><p>Patrial transcript of interrogation with Alicia Stone.</p><p>Officer: What can you tell me about the day Steven was found dead, anything out of the ordinary?</p><p>Alicia Stone: No, nothing I can think of. Mind you, I spend most of my time inside the kitchen.</p><p>Officer: And you were in the kitchen during the afternoon as well? Alone?</p><p>Alicia Stone: In the kitchen yes, but not alone. I had help that day from Gary.</p>"
+    "info": "<p>Patrial transcript of interrogation with Alicia Stone.</p><p>Officer: What can you tell me about the day Steven was found dead, anything out of the ordinary?</p><p>Alicia Stone: No, nothing I can think of. Mind you, I spend most of my time inside the kitchen.</p><p>Officer: And you were in the kitchen during the afternoon as well? Alone?</p><p>Alicia Stone: In the kitchen yes, but not alone. I had help that day from Gary.</p>"
   },
   {
     "fileId": "INT#133",
     "name": "Interrogation - Robert Delaware",
-    "info": "<h1>Interrogation</h1><p>Patrial transcript of interrogation with Robert Delaware.</p><p>Officer: What can you tell me about the day Steven was found dead, anything out of the ordinary?</p><p>Robert Delaware: Out of the ordinary? No... why would anything be out of the ordinary. It was a normal day.</p><p>Officer: What about the meeting you had with Robert?</p><p>Robert Delaware: Oh, just a regular meeting. He wanted to talk about a new garden project on the east side of the residence.</p><p>Officer: Right. And where were you during the afternoon?</p><p>Robert Delaware: Well... after the meeting at about 17.15 I left the residence to head home.</p><p>Officer: Did anyone see you during this time, that can corroborate this?</p><p>Robert Delaware: Eeh.. no, not really.</p>",
+    "info": "<p>Patrial transcript of interrogation with Robert Delaware.</p><p>Officer: What can you tell me about the day Steven was found dead, anything out of the ordinary?</p><p>Robert Delaware: Out of the ordinary? No... why would anything be out of the ordinary. It was a normal day.</p><p>Officer: What about the meeting you had with Robert?</p><p>Robert Delaware: Oh, just a regular meeting. He wanted to talk about a new garden project on the east side of the residence.</p><p>Officer: Right. And where were you during the afternoon?</p><p>Robert Delaware: Well... after the meeting at about 17.15 I left the residence to head home.</p><p>Officer: Did anyone see you during this time, that can corroborate this?</p><p>Robert Delaware: Eeh.. no, not really.</p>",
     "triggersEvent": "delaware"
   },
   {
     "fileId": "TEL#678",
     "name": "Delaware's Phone",
-    "info": "<h1>Delaware's Phone</h1><p>The IT forensic team has analyzed Robert Delaware's phone and found several interesting things.</p><p>Photos: A large number of photos of Ellen Fisher, that looks like they've been taken without her knowing. Many of them seem intimate.</p><p>Tracker: A GPS tracker that track's Ellen's movements, and records of her daily routines.</p><p>SMS: A text message from an unknown number mentioning 'He is on to you'.</p>",
+    "info": "<p>The IT forensic team has analyzed Robert Delaware's phone and found several interesting things.</p><p><strong>Photos:</strong> A large number of photos of Ellen Fisher, that looks like they've been taken without her knowing. Many of them seem intimate.</p><p><strong>Tracker:</strong> A GPS tracker that track Ellen's movements, and records of her daily routines.</p><p><strong>SMS:</strong> A text message from an unknown number mentioning 'He is on to you'.</p>",
     "triggersEvent": "delaware2"
   },
   {
     "fileId": "INT#203",
     "name": "Interrogation 2 - Robert Delaware",
-    "info": "<h1>Interrogation</h1><p>Patrial transcript of the second interrogation with Robert Delaware.</p><p>Officer: Your phone... contains some rather incriminating photos.</p><p>Robert Delaware: It's just some pictures of the family. I work for them, you know.</p><p>Officer: Well, it's rather interesting that you only keep photos of Ellen. And rather intimate ones too.</p><p>Robert Delaware: So what... what does this have to do with anything? Ellen is a beautiful girl, I like beautiful girls.</p><p>Officer: There's a message too. Saying that he's onto you. Who is onto you, Robert? And why?</p><p>Robert Delaware: I don't know.</p><p>Officer: Could it be that Steven found out about your obsession for his daughter?</p><p>Robert Delaware: I don't have an obsession. I love her, and I always have her best interests in mind.</p>"
+    "info": "<p>Patrial transcript of the second interrogation with Robert Delaware.</p><p>Officer: Your phone... contains some rather incriminating photos.</p><p>Robert Delaware: It's just some pictures of the family. I work for them, you know.</p><p>Officer: Well, it's rather interesting that you only keep photos of Ellen. And rather intimate ones too.</p><p>Robert Delaware: So what... what does this have to do with anything? Ellen is a beautiful girl, I like beautiful girls.</p><p>Officer: There's a message too. Saying that he's onto you. Who is onto you, Robert? And why?</p><p>Robert Delaware: I don't know.</p><p>Officer: Could it be that Steven found out about your obsession for his daughter?</p><p>Robert Delaware: I don't have an obsession. I love her, and I always have her best interests in mind.</p>"
   }
 ]

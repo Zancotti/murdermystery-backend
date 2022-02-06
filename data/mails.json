@@ -18,7 +18,7 @@
     "event": ["initial"]
   },
   {
-    "subject": "Help with telephone",
+    "subject": "Help with Steven's telephone",
     "from": "Elsa Wilson",
     "image": "elsa.jpg",
     "unread": true,
@@ -27,12 +27,12 @@
     "event": ["steven"]
   },
   {
-    "subject": "You unlocked the telephone",
+    "subject": "You unlocked Steven's telephone",
     "from": "Elsa Wilson",
     "image": "elsa.jpg",
     "unread": true,
     "timeStamp": "2022-01-02",
-    "text": "Hej<p>TXT#445</p><p>CAL#886</p>",
+    "text": "Hey again!<p>Good job! Thanks to your efforts we were able to access Steven Fisher's telephone. We've extracted an interesting text message and logged it under <strong>TXT#445</strong> and we also thought his calendar might provide some information of his last day - it's logged under <strong>CAL#886</strong>.</p>",
     "event": ["telephoneUnlocked"]
   },
 
@@ -42,7 +42,7 @@
     "image": "owen.jpg",
     "unread": true,
     "timeStamp": "2022-01-02",
-    "text": "<p>I see that you've found the SMS conversation between Price and Steven Fisher and made the connection that Price is Catherine Price, the CTO of Bookface.</p><p>We've taken her in for questioning, you can read the transcript (<strong>INT#476</strong>).</p>",
+    "text": "Hey,<p>I see that you've found the SMS conversation between Price and Steven Fisher and made the connection that Price is Catherine Price, the CTO of Bookface.</p><p>We've taken her in for questioning, you can read the transcript at <strong>INT#476</strong>.</p>",
     "event": ["price", "priceSms"]
   },
   {
@@ -51,7 +51,7 @@
     "image": "elsa.jpg",
     "unread": true,
     "timeStamp": "2022-01-02",
-    "text": "<p>Since Robert Delaware was the last known person who saw Steven Fisher, we decided to search through his phone. You can see the findings at <strong>TEL#678</strong></p>",
+    "text": "Hey again!<p>Since Robert Delaware was the last known person who saw Steven Fisher, we decided to search through his phone. We have logged the findings under <strong>TEL#678</strong>.</p>",
     "event": ["delaware"]
   },
   {
@@ -60,7 +60,7 @@
     "image": "owen.jpg",
     "unread": true,
     "timeStamp": "2022-01-02",
-    "text": "<p>Alright, I think we have all we need to bring in Robert Delaware for a second interrogation. Maybe he can explain the contents of his phone. The interrogation will be recorded here: <strong>INT#203</strong></p>",
+    "text": "Hey there,<p>Alright trooper, I think we have all we need to bring in Robert Delaware for a second interrogation. Maybe he can explain the contents of his phone. The interrogation will be recorded here: <strong>INT#203</strong></p>",
     "event": ["delaware2"]
   }
 ]
