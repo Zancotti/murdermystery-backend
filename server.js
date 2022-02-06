@@ -29,30 +29,30 @@ mongoose
   .catch((err) => console.log("Something went wrong!", err));
 mongoose.Promise = Promise;
 
-// if (process.env.RESET_DATABASE) {
-const seedDatabase = async () => {
-  console.log("Seeding database");
-  await Person.deleteMany({});
-  await File.deleteMany({});
-  await Mail.deleteMany({});
+if (process.env.RESET_DATABASE) {
+  const seedDatabase = async () => {
+    console.log("Seeding database");
+    await Person.deleteMany({});
+    await File.deleteMany({});
+    await Mail.deleteMany({});
 
-  personData.forEach(async (person) => {
-    const newPerson = new Person(person);
-    await newPerson.save();
-  });
+    personData.forEach(async (person) => {
+      const newPerson = new Person(person);
+      await newPerson.save();
+    });
 
-  filesData.forEach(async (file) => {
-    const newFile = new File(file);
-    await newFile.save();
-  });
+    filesData.forEach(async (file) => {
+      const newFile = new File(file);
+      await newFile.save();
+    });
 
-  MailsData.forEach(async (mail) => {
-    const newMail = new Mail(mail);
-    await newMail.save();
-  });
-};
-seedDatabase();
-// }
+    MailsData.forEach(async (mail) => {
+      const newMail = new Mail(mail);
+      await newMail.save();
+    });
+  };
+  seedDatabase();
+}
 
 const authenticateUser = async (req, res, next) => {
   const accessToken = req.header("Authorization");

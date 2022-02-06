@@ -9,3 +9,7 @@ backend.
 
 Link to the frontend repository:
 https://github.com/Zancotti/murdermystery
+
+Link to the live backend: https://murdermystery-backend.herokuapp.com/
+
+Link to the live frontend: https://murdermystery.netlify.app/
